@@ -162,3 +162,9 @@ with tab2:
             st.rerun()
     else:
         st.info("لا توجد طلبات واردة حالياً.")
+        # آٹو ریفریش کوڈ (تاکہ موبائل اور لیپ ٹاپ لائیو جڑے رہیں)
+import time
+from streamlit_autorefresh import st_autorefresh
+
+# ہر 5 سیکنڈ بعد سکرین خود بخود ریفریش ہوگی
+st_autorefresh(interval=5000, key="auto_refresh_orders")
